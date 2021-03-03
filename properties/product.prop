@@ -3,3 +3,8 @@ ro.config.media_vol_steps=25
 ro.oem_unlock_supported=0
 ro.debuggable=1
 ro.adb.secure.recovery=0
+
+# SoC
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=SM8250
+
