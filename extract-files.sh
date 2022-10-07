@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=nabu
+DEVICE=elish
 VENDOR=xiaomi
 
 # Load extract_utils and do some sanity checks

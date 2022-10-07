@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-$(call inherit-product, vendor/xiaomi/nabu/nabu-vendor.mk)
+$(call inherit-product, vendor/xiaomi/elish/elish-vendor.mk)
 
-NABU_PREBUILT := device/xiaomi/nabu-prebuilt
+ELISH_PREBUILT := device/xiaomi/elish-prebuilt
 
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -21,7 +21,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Lawnchair
-$(call inherit-product, packages/apps/Lawnchair/lawnchair.mk)
+# $(call inherit-product, packages/apps/Lawnchair/lawnchair.mk)
 
 # AAPT
 # Device uses high-density artwork where available
@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.recovery.usb.rc \
     init.recovery.qcom.sh \
-    init.thyme.rc
+    init.elish.rc
 
 # fastbootd
 PRODUCT_PACKAGES += \
@@ -93,11 +93,11 @@ PRODUCT_PACKAGES += \
 
 # Kernel
 PRODUCT_COPY_FILES += \
-    $(NABU_PREBUILT)/kernel/dtb.img:dtb.img
+    $(ELISH_PREBUILT)/kernel/dtb.img:dtb.img
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.lights-service.nabu
+    android.hardware.lights-service.elish
 
 # Parts
 PRODUCT_PACKAGES += \
@@ -105,11 +105,11 @@ PRODUCT_PACKAGES += \
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    FrameworkResOverlayNabu \
-    WifiResOverlayNabu \
-    SystemUIOverlayNabu \
-    SettingsProviderOverlayNabu \
-    SettingsOverlayNabu
+    FrameworkResOverlayElish \
+    WifiResOverlayElish \
+    SystemUIOverlayElish \
+    SettingsProviderOverlayElish \
+    SettingsOverlayElish
 
 # Overlays - override vendor ones
 PRODUCT_PACKAGES += \
@@ -154,4 +154,4 @@ PRODUCT_COPY_FILES += \
 
 # Vendor boot modules
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(NABU_PREBUILT)/modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
+    $(call find-copy-subdir-files,*,$(ELISH_PREBUILT)/modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules)
