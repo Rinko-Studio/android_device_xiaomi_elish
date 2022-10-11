@@ -6,6 +6,7 @@ ro.adb.secure.recovery=0
 
 # Display
 debug.sf.frame_rate_multiple_threshold=120
+ro.sf.lcd_density=300
 ro.surface_flinger.set_display_power_timer_ms=1000
 ro.surface_flinger.set_idle_timer_ms=80
 ro.surface_flinger.set_touch_timer_ms=200
