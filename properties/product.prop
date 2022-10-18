@@ -1,3 +1,5 @@
 ro.config.vc_call_vol_steps=11
 ro.config.media_vol_steps=25
 ro.oem_unlock_supported=0
+ro.debuggable=1
+ro.adb.secure.recovery=0
